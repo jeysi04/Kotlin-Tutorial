@@ -19,8 +19,10 @@ fun sayHello(): Unit {
 }
 
 fun greetingName(name: String): String {
-    return "Hello, ${name}"
+    return "Hello, $name"
 }
+
+fun sayMyName(firstName: String, lastName: String): String = "$firstName $lastName"
 
 fun main() {
 
@@ -28,14 +30,21 @@ fun main() {
     println(getGreeting())
 
     //passing a parameter
-    var num1: Int = 2
-    var num2: Int = 3
+    val num1: Int = 2
+    val num2: Int = 3
     println(addNum(num1, num2))
     println("The sum is ${addNum(num1, num2)}")
 
-    val girlName: String = "Ella"
+    var girlName: String = "Ella"
+    println(greetingName(girlName))
+
+    girlName = "Maria Anna"
     println(greetingName(girlName))
 
     //using a Unit
     sayHello()
+    
+    var firstName: String = "Leni"
+    var lastName: String = "Robredo"
+    println("Her name is ${sayMyName(firstName, lastName)}")
 }
