@@ -2,7 +2,7 @@
 
 //A top level variables that can be use inside the function main
 val name3: String = "Sarah"
-var greeting: String = "Good morning!"
+var greeting: String? = null
 
 fun main() {
 
@@ -29,4 +29,25 @@ fun main() {
     var age: Int? = null
     age = 16
     println(age)
+
+    //We cannot set a variable to null when you are not declaring it
+    // greeting = "null" this is not allowed
+    // However, greeting = "Hello" is allowed
+
+    //Using if statement
+    greeting = "Hi, if!"
+    if(greeting != null){
+        println(greeting)
+    }
+    else {
+        println("Hi")
+    }
+
+    //When statement is similar to switch statement
+    when(greeting){
+        null -> println("Hi")
+        else -> println("This is else in when statement!")
+    }
+
+
 }
