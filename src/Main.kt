@@ -2,7 +2,7 @@
 
 //A top level variables that can be use inside the function main
 val name3: String = "Sarah"
-var greeting: String? = null
+var greeting: String? = "HI"
 
 fun main() {
 
@@ -49,5 +49,18 @@ fun main() {
         else -> println("This is else in when statement!")
     }
 
+    var saymyname: String? = "Sammy"
 
+    //assigning using if and else
+    greeting = "Assign using if and else"
+    saymyname = if(greeting != null) greeting else "Hi"
+    println(saymyname)
+
+    //assigning using when
+    greeting = "Assign using when"
+    saymyname = when(greeting){
+        null -> "Hi"
+        else -> greeting
+    }
+    println(saymyname)
 }
