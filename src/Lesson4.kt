@@ -43,5 +43,6 @@ fun main() {
 
     // Limitations for varargs
     val itemsA = arrayOf("I", "am", "JayceeA")
+    //Use a spread operator (*) to spread the array of itemsA and pass it to the vararg parameter
     sayHi(greeting = "Hi", *itemsA)
 }
